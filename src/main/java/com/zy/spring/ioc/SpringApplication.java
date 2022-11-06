@@ -15,5 +15,11 @@ public class SpringApplication {
         System.out.println(website);
         System.out.println(address);
         System.out.println(phone);
+        System.out.println("========================");
+        //获取容器所有beanId数组
+        String[] beanNames = context.getBeanDefinitionNames();
+        for (String beanName : beanNames) {
+            System.out.println(beanName);
+        }
     }
 }
