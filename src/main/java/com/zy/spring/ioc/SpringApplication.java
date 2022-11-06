@@ -9,5 +9,11 @@ public class SpringApplication {
         ApplicationContext context = new ClassPathXmlApplicationContext("classpath:applicationContext.xml");
         Company company = context.getBean("company", Company.class);
         System.out.println(company);
+        String website = company.getInfo().getProperty("website");
+        String address = company.getInfo().getProperty("address");
+        String phone = company.getInfo().getProperty("phone");
+        System.out.println(website);
+        System.out.println(address);
+        System.out.println(phone);
     }
 }
