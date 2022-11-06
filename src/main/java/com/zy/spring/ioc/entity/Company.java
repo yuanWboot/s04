@@ -6,17 +6,17 @@ import java.util.Properties;
 import java.util.Set;
 
 public class Company {
-    private List<String> rooms;
+    private Set<String> rooms;
     private Map<String,Computer> computers;
     private Properties info;
 
 
 
-    public List<String> getRooms() {
+    public Set<String> getRooms() {
         return rooms;
     }
 
-    public void setRooms(List<String> rooms) {
+    public void setRooms(Set<String> rooms) {
         this.rooms = rooms;
     }
 
