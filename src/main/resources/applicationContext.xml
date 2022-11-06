@@ -3,6 +3,13 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="c1" class="com.zy.spring.ioc.entity.Computer">
+        <constructor-arg name="brand" value="联想"/>
+        <constructor-arg name="type" value="台式机"/>
+        <constructor-arg name="sn" value="100111"/>
+        <constructor-arg name="price" value="3500"/>
+    </bean>
 <bean id="company" class="com.zy.spring.ioc.entity.Company">
     <property name="rooms">
         <list>
@@ -14,5 +21,26 @@
             <value>1006-研发部办公室</value>
         </list>
     </property>
+    <property name="computers">
+        <map>
+            <entry key="dev-1001" value-ref="c1"/>
+            <entry key="dev-1002">
+                <bean class="com.zy.spring.ioc.entity.Computer">
+                    <constructor-arg name="brand" value="联想"/>
+                    <constructor-arg name="type" value="台式机"/>
+                    <constructor-arg name="sn" value="100111"/>
+                    <constructor-arg name="price" value="3500"/>
+                </bean>
+            </entry>
+        </map>
+    </property>
+    <property name="info">
+        <props>
+            <prop key="phone">010-xxxxxxx</prop>
+            <prop key="address">北京市朝阳区xxx大夏</prop>
+            <prop key="website">http://www.xxx.com</prop>
+        </props>
+    </property>
 </bean>
+
 </beans>
