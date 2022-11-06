@@ -1,6 +1,7 @@
 package com.zy.spring.ioc;
 
 import com.zy.spring.ioc.entity.Company;
+import com.zy.spring.ioc.entity.Computer;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -21,5 +22,8 @@ public class SpringApplication {
         for (String beanName : beanNames) {
             System.out.println(beanName);
         }
+        System.out.println("-------------------");
+        Computer computer1 = context.getBean("com.zy.spring.ioc.entity.Computer#1",Computer.class);
+        System.out.println(computer1.getBrand());
     }
 }
