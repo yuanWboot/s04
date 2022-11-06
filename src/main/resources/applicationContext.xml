@@ -10,6 +10,20 @@
         <constructor-arg name="sn" value="100111"/>
         <constructor-arg name="price" value="3500"/>
     </bean>
+<!--没有name也没有id标识的匿名bean，默认为类名的全称-->
+    <bean class="com.zy.spring.ioc.entity.Computer">
+        <constructor-arg name="brand" value="联想1"/>
+        <constructor-arg name="type" value="台式机"/>
+        <constructor-arg name="sn" value="100111"/>
+        <constructor-arg name="price" value="3500"/>
+    </bean>
+
+    <bean class="com.zy.spring.ioc.entity.Computer">
+        <constructor-arg name="brand" value="联想2"/>
+        <constructor-arg name="type" value="台式机"/>
+        <constructor-arg name="sn" value="100111"/>
+        <constructor-arg name="price" value="3500"/>
+    </bean>
 <bean id="company" class="com.zy.spring.ioc.entity.Company">
     <property name="rooms">
         <list>
