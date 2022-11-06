@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+<bean id="company" class="com.zy.spring.ioc.entity.Company">
+    <property name="rooms">
+        <list>
+            <value>1001-总裁办公室</value>
+            <value>1003-总经理办公室</value>
+            <value>1006-研发部办公室</value>
+            <value>1006-研发部办公室</value>
+            <value>1006-研发部办公室</value>
+            <value>1006-研发部办公室</value>
+        </list>
+    </property>
+</bean>
+</beans>
