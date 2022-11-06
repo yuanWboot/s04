@@ -23,6 +23,8 @@ public class SpringApplication {
             System.out.println(beanName);
         }
         System.out.println("-------------------");
+        Computer computer0 = context.getBean("com.zy.spring.ioc.entity.Computer#0",Computer.class);
+        System.out.println(computer0.getBrand());
         Computer computer1 = context.getBean("com.zy.spring.ioc.entity.Computer#1",Computer.class);
         System.out.println(computer1.getBrand());
     }
